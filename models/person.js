@@ -8,6 +8,7 @@ const personSchema = new Schema({
     type: String,
     status: String,
     location: {type: Schema.ObjectId, ref: 'Location'},
+    series: {type: Schema.ObjectId, ref: 'Series'},
     gender: String,
     image: String,
     url: String,

@@ -18,5 +18,5 @@ module.exports = [
         model: "location",
         path: "/location/:id",
         handler: "findById",
-    },
+    }
 ]
