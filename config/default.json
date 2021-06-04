@@ -1,0 +1,6 @@
+{
+  "port": 8080,
+  "jwtSecret": "turtles",
+  "mongoUri": "mongodb+srv://Mikhail:12345@cluster0.ztc55.azure.mongodb.net/turtles?retryWrites=true&w=majority",
+  "baseUrl": "http://localhost:5000"
+}
