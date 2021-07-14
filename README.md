@@ -8,7 +8,7 @@
 
 ## Wrappers
 
-- **JavaScript**: [The Ninja Turtles API Node client](https://github.com/afuh/rick-and-morty-api-node) by [Mickey_Zzz](https://github.com/MiCkEyZzZ)
+- **JavaScript**: [The Ninja Turtles API Node client](https://github.com/MiCkEyZzZ/ninja-turtles-api) by [Mickey_Zzz](https://github.com/MiCkEyZzZ)
 
 ## Support
 
