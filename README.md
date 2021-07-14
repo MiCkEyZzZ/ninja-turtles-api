@@ -1,6 +1,6 @@
 # The Ninja Turtles API
 
-[The Ninja Turtles API](http://politiciansapi.com) is a RESTful and GraphQL API based on the real world. You will access to data about hundreds of personages, images, locations etc. The Politicians API is filled with canonical information as seen on the Real world.
+[The Ninja Turtles API](https://github.com/MiCkEyZzZ/ninja-turtles) is a RESTful and GraphQL API based on the real world. You will access to data about hundreds of personages, images, locations etc. The Politicians API is filled with canonical information as seen on the Real world.
 
 ## User Guide
 
