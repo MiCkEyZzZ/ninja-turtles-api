@@ -1,0 +1,407 @@
+[
+  {
+    "id": 1,
+    "name": "Turtle Trucks",
+    "release": "December 14, 1987",
+    "episode": "S01E01",
+    "character": [],
+    "url": "https:/localhost:8080/api/episode/1",
+    "created": "2021-09-10T10:16:02.798Z"
+  },
+  {
+    "id": 2,
+    "name": "Enter The Shredder",
+    "release": "December 15, 1987",
+    "episode": "S01E02",
+    "character": [],
+    "url": "https:/localhost:8080/api/episode/2",
+    "created": "2021-09-10T10:16:02.798Z"
+  },
+  {
+    "id": 3,
+    "name": "A Thing About Rats",
+    "release": "December 16, 1987",
+    "episode": "S01E03",
+    "character": [],
+    "url": "https:/localhost:8080/api/episode/3",
+    "created": "2021-09-10T10:16:02.798Z"
+  },
+  {
+    "id": 4,
+    "name": "Hot Rodding Teenagers from Dimension X",
+    "release": "December 17, 1987",
+    "episode": "S01E04",
+    "character": [],
+    "url": "https:/localhost:8080/api/episode/4",
+    "created": "2021-09-10T10:16:02.798Z"
+  },
+  {
+    "id": 5,
+    "name": "Shredder & Splintered",
+    "release": "December 18, 1987",
+    "episode": "S01E05",
+    "character": [],
+    "url": "https:/localhost:8080/api/episode/5",
+    "created": "2021-09-10T10:16:02.798Z"
+  },
+  {
+    "id": 6,
+    "name": "Return of the Shredder",
+    "release": "October 1, 1988",
+    "episode": "S02E01",
+    "character": [],
+    "url": "https:/localhost:8080/api/episode/6",
+    "created": "2021-09-10T10:16:02.798Z"
+  },
+  {
+    "id": 7,
+    "name": "The Incredible Shrinking Turtles",
+    "release": "October 8, 1988",
+    "episode": "S02E02",
+    "character": [],
+    "url": "https:/localhost:8080/api/episode/7",
+    "created": "2021-09-10T10:16:02.798Z"
+  },
+  {
+    "id": 8,
+    "name": "It Came from Beneath the Sewers",
+    "release": "October 15, 1988",
+    "episode": "S02E03",
+    "character": [],
+    "url": "https:/localhost:8080/api/episode/8",
+    "created": "2021-09-10T10:16:02.798Z"
+  },
+  {
+    "id": 9,
+    "name": "The Mean Machines",
+    "release": "October 22, 1988",
+    "episode": "S02E04",
+    "character": [],
+    "url": "https:/localhost:8080/api/episode/9",
+    "created": "2021-09-10T10:16:02.798Z"
+  },
+  {
+    "id": 10,
+    "name": "Curse of the Evil Eye",
+    "release": "October 29, 1988",
+    "episode": "S02E05",
+    "character": [],
+    "url": "https:/localhost:8080/api/episode/10",
+    "created": "2021-09-10T10:16:02.798Z"
+  },
+  {
+    "id": 11,
+    "name": "The Case of the Killer Pizzas",
+    "release": "November 5, 1988",
+    "episode": "S02E06",
+    "character": [],
+    "url": "https:/localhost:8080/api/episode/11",
+    "created": "2021-09-10T10:16:02.798Z"
+  },
+  {
+    "id": 12,
+    "name": "Enter: The Fly",
+    "release": "November 12, 1988",
+    "episode": "S02E07",
+    "character": [],
+    "url": "https:/localhost:8080/api/episode/12",
+    "created": "2021-09-10T10:16:02.798Z"
+  },
+  {
+    "id": 13,
+    "name": "Invasion of the Punk Frogs",
+    "release": "November 19, 1988",
+    "episode": "S02E08",
+    "character": [],
+    "url": "https:/localhost:8080/api/episode/13",
+    "created": "2021-09-10T10:16:02.798Z"
+  },
+  {
+    "id": 14,
+    "name": "Splinter No More",
+    "release": "November 26, 1988",
+    "episode": "S02E09",
+    "character": [],
+    "url": "https:/localhost:8080/api/episode/14",
+    "created": "2021-09-10T10:16:02.798Z"
+  },
+  {
+    "id": 15,
+    "name": "New York's Shiniest",
+    "release": "December 3, 1988",
+    "episode": "S02E10",
+    "character": [],
+    "url": "https:/localhost:8080/api/episode/15",
+    "created": "2021-09-10T10:16:02.798Z"
+  },
+  {
+    "id": 16,
+    "name": "Teenagers from Dimension X",
+    "release": "December 10, 1988",
+    "episode": "S02E11",
+    "character": [],
+    "url": "https:/localhost:8080/api/episode/16",
+    "created": "2021-09-10T10:16:02.798Z"
+  },
+  {
+    "id": 17,
+    "name": "The Catwoman from Channel Six",
+    "release": "December 17, 1988",
+    "episode": "S02E12",
+    "character": [],
+    "url": "https:/localhost:8080/api/episode/17",
+    "created": "2021-09-10T10:16:02.798Z"
+  },
+  {
+    "id": 18,
+    "name": "Return of the Technodrome",
+    "release": "December 24, 1988",
+    "episode": "S02E13",
+    "character": [],
+    "url": "https:/localhost:8080/api/episode/18",
+    "created": "2021-09-10T10:16:02.798Z"
+  },
+  {
+    "id": 19,
+    "name": "Beneath These Streets",
+    "release": "September 25, 1989",
+    "episode": "S03E01",
+    "character": [],
+    "url": "https:/localhost:8080/api/episode/19",
+    "created": "2021-09-10T10:16:02.798Z"
+  },
+  {
+    "id": 20,
+    "name": "Turtles on Trial",
+    "release": "September 26, 1989",
+    "episode": "S03E07",
+    "character": [],
+    "url": "https:/localhost:8080/api/episode/20",
+    "created": "2021-09-10T10:16:02.798Z"
+  },
+  {
+    "id": 21,
+    "name": "Attack of the 50-Foot Irma",
+    "release": "September 27, 1989",
+    "episode": "S03E08",
+    "character": [],
+    "url": "https:/localhost:8080/api/episode/21",
+    "created": "2021-09-10T10:16:02.798Z"
+  },
+  {
+    "id": 22,
+    "name": "The Maltese Hamster",
+    "release": "September 28, 1989",
+    "episode": "S03E09",
+    "character": [],
+    "url": "https:/localhost:8080/api/episode/22",
+    "created": "2021-09-10T10:16:02.798Z"
+  },
+  {
+    "id": 23,
+    "name": "Sky Turtles",
+    "release": "September 29, 1989",
+    "episode": "S03E03",
+    "character": [],
+    "url": "https:/localhost:8080/api/episode/23",
+    "created": "2021-09-10T10:16:02.798Z"
+  },
+  {
+    "id": 24,
+    "name": "The Old Switcheroo",
+    "release": "October 2, 1989",
+    "episode": "S03E06",
+    "character": [],
+    "url": "https:/localhost:8080/api/episode/24",
+    "created": "2021-09-10T10:16:02.798Z"
+  },
+  {
+    "id": 25,
+    "name": "Burne's Blues",
+    "release": "October 3, 1989",
+    "episode": "S03E17",
+    "character": [],
+    "url": "https:/localhost:8080/api/episode/25",
+    "created": "2021-09-10T10:16:02.798Z"
+  },
+  {
+    "id": 26,
+    "name": "The Fifth Turtle",
+    "release": "October 4, 1989",
+    "episode": "S03E10",
+    "character": [],
+    "url": "https:/localhost:8080/api/episode/26",
+    "created": "2021-09-10T10:16:02.798Z"
+  },
+  {
+    "id": 27,
+    "name": "Enter the Rat King",
+    "release": "October 5, 1989",
+    "episode": "S03E15",
+    "character": [],
+    "url": "https:/localhost:8080/api/episode/27",
+    "created": "2021-09-10T10:16:02.798Z"
+  },
+  {
+    "id": 28,
+    "name": "Turtles at the Earth's Core",
+    "release": "October 6, 1989",
+    "episode": "S03E16",
+    "character": [],
+    "url": "https:/localhost:8080/api/episode/28",
+    "created": "2021-09-10T10:16:02.798Z"
+  },
+  {
+    "id": 29,
+    "name": "April Fool' A.K.A. 'April Foolish",
+    "release": "October 9, 1989",
+    "episode": "S03E02",
+    "character": [],
+    "url": "https:/localhost:8080/api/episode/29",
+    "created": "2021-09-10T10:16:02.798Z"
+  },
+  {
+    "id": 30,
+    "name": "Attack of Big MACC",
+    "release": "October 10, 1989",
+    "episode": "S03E23",
+    "character": [],
+    "url": "https:/localhost:8080/api/episode/30",
+    "created": "2021-09-10T10:16:02.798Z"
+  },
+  {
+    "id": 31,
+    "name": "The Ninja Sword of Nowhere",
+    "release": "October 11, 1989",
+    "episode": "S03E12",
+    "character": [],
+    "url": "https:/localhost:8080/api/episode/31",
+    "created": "2021-09-10T10:16:02.798Z"
+  },
+  {
+    "id": 32,
+    "name": "20,000 Leaks Under the City",
+    "release": "October 12, 1989",
+    "episode": "S03E18",
+    "character": [],
+    "url": "https:/localhost:8080/api/episode/32",
+    "created": "2021-09-10T10:16:02.798Z"
+  },
+  {
+    "id": 33,
+    "name": "Take Me to Your Leader",
+    "release": "October 13, 1989",
+    "episode": "S03E14",
+    "character": [],
+    "url": "https:/localhost:8080/api/episode/33",
+    "created": "2021-09-10T10:16:02.798Z"
+  },
+  {
+    "id": 34,
+    "name": "Four Musketurtles",
+    "release": "October 16, 1989",
+    "episode": "S03E32",
+    "character": [],
+    "url": "https:/localhost:8080/api/episode/34",
+    "created": "2021-09-10T10:16:02.798Z"
+  },
+  {
+    "id": 35,
+    "name": "Turtles, Turtles, Everywhere",
+    "release": "October 17, 1989",
+    "episode": "S03E29",
+    "character": [],
+    "url": "https:/localhost:8080/api/episode/35",
+    "created": "2021-09-10T10:16:02.798Z"
+  },
+  {
+    "id": 36,
+    "name": "Cowabunga Shredhead",
+    "release": "October 18, 1989",
+    "episode": "S03E04",
+    "character": [],
+    "url": "https:/localhost:8080/api/episode/36",
+    "created": "2021-09-10T10:16:02.798Z"
+  },
+  {
+    "id": 37,
+    "name": "Invasion of the Turtle Snatchers",
+    "release": "October 19, 1989",
+    "episode": "S03E05",
+    "character": [],
+    "url": "https:/localhost:8080/api/episode/37",
+    "created": "2021-09-10T10:16:02.798Z"
+  },
+  {
+    "id": 38,
+    "name": "Camera Bugged",
+    "release": "October 20, 1989",
+    "episode": "S03E11",
+    "character": [],
+    "url": "https:/localhost:8080/api/episode/38",
+    "created": "2021-09-10T10:16:02.798Z"
+  },
+  {
+    "id": 39,
+    "name": "Green with Jealousy",
+    "release": "October 23, 1989",
+    "episode": "S03E13",
+    "character": [],
+    "url": "https:/localhost:8080/api/episode/39",
+    "created": "2021-09-10T10:16:02.798Z"
+  },
+  {
+    "id": 40,
+    "name": "Return of the Fly",
+    "release": "October 24, 1989",
+    "episode": "S03E30",
+    "character": [],
+    "url": "https:/localhost:8080/api/episode/40",
+    "created": "2021-09-10T10:16:02.798Z"
+  },
+  {
+    "id": 41,
+    "name": "Casey Jones: Outlaw Hero",
+    "release": "October 25, 1989",
+    "episode": "S03E27",
+    "character": [],
+    "url": "https:/localhost:8080/api/episode/41",
+    "created": "2021-09-10T10:16:02.798Z"
+  },
+  {
+    "id": 42,
+    "name": "Mutagen Monster",
+    "release": "October 26, 1989",
+    "episode": "S03E26",
+    "character": [],
+    "url": "https:/localhost:8080/api/episode/42",
+    "created": "2021-09-10T10:16:02.798Z"
+  },
+  {
+    "id": 43,
+    "name": "Corporate Raiders from Dimension X",
+    "release": "October 27, 1989",
+    "episode": "S03E35",
+    "character": [],
+    "url": "https:/localhost:8080/api/episode/43",
+    "created": "2021-09-10T10:16:02.798Z"
+  },
+  {
+    "id": 44,
+    "name": "Pizza by the Shred",
+    "release": "October 30, 1989",
+    "episode": "S03E39",
+    "character": [],
+    "url": "https:/localhost:8080/api/episode/44",
+    "created": "2021-09-10T10:16:02.798Z"
+  },
+  {
+    "id": 45,
+    "name": "Super Bebop & Mighty Rocksteady",
+    "release": "October 31, 1989",
+    "episode": "S03E21",
+    "character": [],
+    "url": "https:/localhost:8080/api/episode/45",
+    "created": "2021-09-10T10:16:02.798Z"
+  }
+]
