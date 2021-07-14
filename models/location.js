@@ -1,7 +1,7 @@
-const {Schema, model} = require('mongoose')
-const mongodbErrorHandler = require('mongoose-mongodb-errors')
+import mongoose from 'mongoose'
+import mongodbErrorHandler from 'mongoose-mongodb-errors'
 
-const locationSchema = new Schema({
+const locationSchema = new mongoose.Schema({
     id: Number,
     name: String,
     type: String,
@@ -13,4 +13,4 @@ const locationSchema = new Schema({
 
 locationSchema.plugin(mongodbErrorHandler)
 
-module.exports = model('Location', locationSchema)
+export default mongoose.model('Location', locationSchema)

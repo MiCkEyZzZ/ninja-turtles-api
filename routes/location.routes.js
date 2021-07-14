@@ -1,25 +1,10 @@
-const {Router} = require('express')
-const Location = require('../models/location')
+import {Router} from 'express'
 const router = Router()
 
-const {message} = require('../helpers/index')
+import locationController from '../controllers/location.controller.js'
 
-// /api/location
-router.get('/location', async (req, res) => {
-    try {
+router.get('/', locationController.getAllLocation)
 
-    } catch (error) {
-        await res.status(500).json({error: message.wrong})
-    }
-})
+router.get('/:id', locationController.getOneLocation)
 
-// /api/location/:id
-router.get('/location/:id', async (req, res) => {
-    try {
-
-    } catch (error) {
-        await res.status(500).json({error: message.wrong})
-    }
-})
-
-module.exports = router
+export default router
