@@ -1,25 +1,42 @@
-import EpisodeService from '../services/episode.service.js'
-import apiError from '../errors/api.error.js'
-import {message} from '../messages/message.js'
+const EpisodeService = require('../services/episode.service')
+const ApiError = require('../utils/api.error')
 
 class EpisodeController {
     async getAllEpisode(req, res, next) {
         try {
             const episodes = await EpisodeService.getAllEpisode()
-            res.status(200).json(episodes)
-        } catch (error) {
-            await next(apiError.internal(message.someWrong))
+
+            res.status(200).json({
+                status: 'success',
+                results: episodes.length,
+                data: {
+                    episodes,
+                },
+            })
+        } catch (err) {
+            next(err)
         }
     }
 
     async getOneEpisode(req, res, next) {
         try {
-            const episode = await EpisodeService.getOneEpisode(req.params.id)
-            res.status(200).json(episode)
-        } catch (error) {
-            await next(apiError.internal(message.someWrong))
+            const { id } = req.params
+            const episode = await EpisodeService.getOneEpisode(id)
+
+            if (!episode) {
+                return next(new ApiError(`Episode with this ID ${episode.id} not found`, 404))
+            }
+
+            res.status(200).json({
+                status: 'success',
+                data: {
+                    episode,
+                },
+            })
+        } catch (err) {
+            next(err)
         }
     }
 }
 
-export default new EpisodeController()
+module.exports = new EpisodeController()

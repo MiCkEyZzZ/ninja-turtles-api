@@ -1,23 +1,40 @@
-import CharacterService from '../services/character.service.js'
-import apiError from '../errors/api.error.js'
-import {message} from '../messages/message.js'
+const CharacterService = require('../services/character.service')
+const ApiError = require('../utils/api.error.js')
 
 class CharacterController {
     async getAllCharacter(req, res, next) {
         try {
             const characters = await CharacterService.getAllCharacter()
-            res.status(200).json(characters)
-        } catch (error) {
-            await next(apiError.internal(message.someWrong))
+
+            res.status(200).json({
+                status: 'success',
+                results: characters.length,
+                data: {
+                    characters
+                }
+            })
+        } catch (err) {
+            next(err)
         }
     }
 
     async getOneCharacter(req, res, next) {
         try {
-            const character = await CharacterService.getOneCharacter(req.params.id)
-            res.status(200).json(character)
-        } catch (error) {
-            await next(apiError.internal(message.someWrong))
+            const { id } = req.params
+            const character = await CharacterService.getOneCharacter(id)
+
+            if (!character) {
+                return next(new ApiError(`Character with this ID ${ character.id } not found`, 404))
+            }
+
+            res.status(200).json({
+                status: 'success',
+                data: {
+                    character
+                }
+            })
+        } catch (err) {
+            next(err)
         }
      }
 
@@ -30,4 +47,4 @@ class CharacterController {
      }
 }
 
-export default new CharacterController()
+module.exports = new CharacterController()

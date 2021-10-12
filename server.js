@@ -1,20 +1,20 @@
-import dotenv from 'dotenv'
-dotenv.config()
+const mongoose = require('mongoose')
+const dotenv = require('dotenv')
 
-import express from 'express'
-import mongoose from 'mongoose'
-import cors from 'cors'
-import router from './routes/index.js'
+dotenv.config({ path: './.env'})
+const app = require('./app')
 
-import {ApolloServer} from 'apollo-server-express'
-import typeDefs from './graphql/typeDefs.js'
-import resolvers from './graphql/resolvers.js'
-import {Character, Location, Episode} from './graphql/sources.js'
+const { ApolloServer } = require('apollo-server-express')
+const typeDefs = require('./graphql/typeDefs')
+const resolvers = require('./graphql/resolvers')
+const { Character, Location, Episode } = require('./graphql/sources')
+
+const DB_URL = process.env.DATABASE.replace(
+    `<PASSWORD>`,
+    process.env.DATABASE_PASSWORD
+)
 
 const PORT = process.env.PORT || 8080
-
-const LOCAL = process.env.DEV_URL
-const DB_URL = process.env.NODE_ENV === 'production' ? process.env.DATABASE : LOCAL
 
 const server = new ApolloServer({
     typeDefs,
@@ -28,14 +28,7 @@ const server = new ApolloServer({
     })
 })
 
-const app = express()
-app.use(cors())
-app.use(express.json())
-app.use(express.static('images'))
-app.use(express.urlencoded({extended: true}))
-app.use('/api', router)
-
-server.applyMiddleware({app})
+server.applyMiddleware({ app })
 
 async function start () {
     try {
@@ -50,16 +43,19 @@ async function start () {
                 '\x1b[34m%s\x1b[0m',
                 `
                   ${app.get('env').toUpperCase()}
-                  Rest      http://localhost:${PORT}/api/
+                  Rest      http://localhost:${PORT}/api/v1/
                   GraphQL   http://localhost:${PORT}${server.graphqlPath}/
                   Database  ${mongoose.connection.host}/${mongoose.connection.name}
               `
             )
         })
-    } catch (error) {
-        console.log('Server error', error.message)
+    } catch (err) {
+        console.error(err.name, err.message)
+        console.log('Unhandled rejection. Shutting down...')
         process.exit(1)
     }
 }
 
 start()
+
+module.exports = server

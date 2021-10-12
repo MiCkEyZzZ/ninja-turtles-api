@@ -1,7 +1,7 @@
-import {RESTDataSource} from 'apollo-datasource-rest'
-import {baseUrl, createObject} from '../utils/common.js'
+const { RESTDataSource } = require('apollo-datasource-rest')
+const { baseUrl, createObject } = require('../utils/common')
 
-export class Character extends RESTDataSource {
+class Character extends RESTDataSource {
     constructor() {
         super()
 
@@ -23,7 +23,7 @@ export class Character extends RESTDataSource {
     }
 }
 
-export class Location extends RESTDataSource {
+class Location extends RESTDataSource {
     constructor() {
         super()
 
@@ -45,7 +45,7 @@ export class Location extends RESTDataSource {
     }
 }
 
-export class Episode extends RESTDataSource {
+class Episode extends RESTDataSource {
     constructor() {
         super()
 
@@ -66,3 +66,5 @@ export class Episode extends RESTDataSource {
         return this.get('/' + id)
     }
 }
+
+module.exports = { Character, Location, Episode }
