@@ -1,4 +1,4 @@
-import Location from '../models/location.js'
+const Location = require('../models/location.model')
 
 class LocationService {
     async getAllLocation() {
@@ -14,4 +14,4 @@ class LocationService {
     }
 }
 
-export default new LocationService()
+module.exports = new LocationService()

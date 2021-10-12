@@ -1,7 +1,7 @@
-import { Router } from 'express'
+const { Router } = require('express')
 const router = Router()
 
-import characterController from '../controllers/character.controller.js'
+const characterController = require('../controllers/character.controller')
 
 router.get('/', characterController.getAllCharacter)
 
@@ -9,4 +9,4 @@ router.get('/:id', characterController.getOneCharacter)
 
 router.get('/avatar', characterController.getCharacterAvatar)
 
-export default router
+module.exports = router

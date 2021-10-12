@@ -1,4 +1,4 @@
-import Episode from '../models/episode.js'
+const Episode = require('../models/episode.model')
 
 class EpisodeService {
     async getAllEpisode() {
@@ -14,4 +14,4 @@ class EpisodeService {
     }
 }
 
-export default new EpisodeService()
+module.exports = new EpisodeService()

@@ -1,12 +1,12 @@
-import {Router} from 'express'
+const { Router } = require('express')
 const router = Router()
 
-import characterRoutes from './character.routes.js'
-import locationRoutes from './location.routes.js'
-import episodeRoutes from './episode.routes.js'
+const characterRoutes = require('./character.routes')
+const locationRoutes = require('./location.routes')
+const episodeRoutes = require('./episode.routes')
 
 router.use('/character', characterRoutes)
 router.use('/location', locationRoutes)
 router.use('/episode', episodeRoutes)
 
-export default router
+module.exports = router

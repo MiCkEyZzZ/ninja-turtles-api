@@ -1,4 +1,4 @@
-import Character from '../models/character.js'
+const Character = require('../models/character.model')
 
 class CharacterService {
     async getAllCharacter() {
@@ -18,4 +18,4 @@ class CharacterService {
     }
 }
 
-export default new CharacterService()
+module.exports = new CharacterService()

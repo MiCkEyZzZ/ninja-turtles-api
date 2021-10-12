@@ -1,10 +1,10 @@
-import {Router} from 'express'
+const { Router } = require('express')
 const router = Router()
 
-import episodeController from '../controllers/episode.controller.js'
+const episodeController = require('../controllers/episode.controller')
 
 router.get('/', episodeController.getAllEpisode)
 
 router.get('/:id', episodeController.getOneEpisode)
 
-export default router
+module.exports = router

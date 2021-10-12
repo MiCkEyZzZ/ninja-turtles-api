@@ -1,4 +1,4 @@
-import {checkArray, statusInfo, urlId} from '../utils/common.js'
+const { checkArray, statusInfo, urlId } = require('../utils/common')
 
 const resolvers = {
     Query: {
@@ -67,4 +67,4 @@ const resolvers = {
     }
 }
 
-export default resolvers
+module.exports = resolvers
