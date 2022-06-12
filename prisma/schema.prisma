@@ -1,0 +1,52 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Character {
+    id            Int @id @default(autoincrement())
+    name          String @db.VarChar(40)
+    species       String
+    type          String
+    status        String
+    locationId    Int?
+    location      Location? @relation(fields: [locationId], references: [id])
+    occupation    String
+    gender        String
+    episode       Episode[]
+    weapons       String[]
+    bandana_color String?
+    affiliation   String?
+    image_cover   String
+    url           String
+    createdAt     DateTime @default(now())
+}
+
+model Location {
+    id          Int @id @default(autoincrement())
+    name        String @db.VarChar(40)
+    type        String
+    dimension   String
+    residents   Character[]
+    url         String
+    image_cover String
+    images      String[]
+    createdAt   DateTime @default(now())
+}
+
+model Episode {
+    id          Int @id @default(autoincrement())
+    name        String @db.VarChar(70)
+    episode     String
+    producers   String[]
+    season      String
+    air_date    String
+    characters  Character[]
+    image_cover String
+    url         String
+    createdAt   DateTime @default(now())
+}
