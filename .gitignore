@@ -6,4 +6,5 @@ node_modules
 .env.*
 public/
 coverage
-mock
+src/mock
+!/prisma/schema.prisma

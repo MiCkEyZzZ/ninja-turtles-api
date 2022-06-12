@@ -1,19 +1,19 @@
 # The Ninja Turtles API
 
-[The Ninja Turtles API](http://politiciansapi.com) is a RESTful and GraphQL API based on the real world. You will access to data about hundreds of personages, images, locations etc. The Politicians API is filled with canonical information as seen on the Real world.
+[The Ninja Turtles API](http://politiciansapi.com) — это RESTful и GraphQL API основанный на 
+комиксах и телевизионных сериалах от известной американской медиафраншизы. 
+Вы получаете доступ к данным о сотнях персонажей, изображений, локаций и эпизодов. 
+API заполнен канонической информацией, которая полностью соответствует 
+информации представленной в сериалах, комиксах и других официальных источников.
 
-## User Guide
+## Руководство пользователя
+**Вы можете найти подробную инструкцию по использованию API и другую информацию в [документации.](http://politiciansapi.com/documentation/)**
 
-**You can find detailed instructions on using API and other tips in its [documentation](http://politiciansapi.com/documentation/)**
+## Обёртки
+- **JavaScript**: [The Ninja Turtles API Node client](https://github.com/MiCkEyZzZ/ninja-turtles-api-node) — [Mickey_Zzz](https://github.com/MiCkEyZzZ)
 
-## Wrappers
+## Поддержка
+The Ninja Turtles API — это проект, который поддерживается сообществом и все участники являются энтузиастами.
 
-- **JavaScript**: [The Ninja Turtles API Node client](https://github.com/afuh/rick-and-morty-api-node) by [Mickey_Zzz](https://github.com/MiCkEyZzZ)
-
-## Support
-
-The Ninja Turtles API is community maintained project and all contributors are volunteers.
-
-## License
-
-The Ninja Turtles API is open source software licenced as MIT.
+## Лицензия
+The Ninja Turtles API — это программное обеспечение с открытым исходным кодом, лицензированное MIT.
