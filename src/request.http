@@ -1,16 +1,20 @@
+### Получение all Endpoints
+GET http://localhost:8181/api/
+
+
 ### Получение всех персонажей (Get all Characters)
 GET http://localhost:8181/api/character
 
 
-### Получение одного персонажа (Get one Character)
-GET http://localhost:8181/api/character/1
+### Получение одного персонажа (Get single Character)
+GET http://localhost:8181/api/character/5
 
 
 ### Получение всех локаций (Get all Locations)
 GET http://localhost:8181/api/location
 
 
-### Получение одной локации (Get one Location)
+### Получение одной локации (Get single Location)
 GET http://localhost:8181/api/location/1
 
 
@@ -18,5 +22,5 @@ GET http://localhost:8181/api/location/1
 GET http://localhost:8181/api/episode
 
 
-### Получение одного эпизода (Get one Episode)
-GET http://localhost:8181/api/episode/1
+### Получение одного эпизода (Get single Episode)
+GET http://localhost:8181/api/episode/2
