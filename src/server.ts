@@ -1,51 +1,30 @@
-import dotenv from 'dotenv'
+import { Container, ContainerModule, interfaces } from 'inversify'
 
-import { ApolloServer } from 'apollo-server-express'
-import app from './app'
+import { App } from './app'
+import { TYPES } from './types'
+import { IBootStrapReturn, IExeptionFilter, ILogger } from './interfaces'
+import { LoggerService } from './logger/logger.service'
+import { CharacterController } from './characters/character.controller'
+import { LocationController } from './locations/location.controller'
+import { EpisodeController } from './episodes/episode.controller'
+import { ExeptionFilter } from './errors/exeption.filter'
 
-import typeDefs from './graphql/typeDefs'
-import resolvers from './graphql/resolvers'
-import { Character, Location, Episode } from './graphql/sources'
-
-dotenv.config({ path: './.env' })
-
-const isProduction = process.env.NODE_ENV === 'production'
-
-const server = new ApolloServer({
-  typeDefs,
-  resolvers,
-  introspection: true,
-  playground: true,
-  dataSources: () => ({
-    character: new Character(),
-    location: new Location(),
-    episode: new Episode()
-  }),
+export const appBindings = new ContainerModule((bind: interfaces.Bind) => {
+	bind<ILogger>(TYPES.ILogger).to(LoggerService)
+	bind<IExeptionFilter>(TYPES.ExeptionFilter).to(ExeptionFilter)
+	bind<CharacterController>(TYPES.CharacterController).to(CharacterController)
+	bind<LocationController>(TYPES.LocationController).to(LocationController)
+	bind<EpisodeController>(TYPES.EpisodeController).to(EpisodeController)
+	bind<App>(TYPES.Application).to(App)
 })
 
-server.applyMiddleware({ app })
+function bootstrap(): IBootStrapReturn {
+	const appContainer = new Container()
+	appContainer.load(appBindings)
+	const app = appContainer.get<App>(TYPES.Application)
+	app.init()
 
-const PORT = process.env.PORT || 8181
-
-async function start() {
-  try {
-    app.listen(PORT, () => {
-      console.log(
-        '\x1b[34m%s\x1b[0m',
-        `
-          ${app.get('env').toUpperCase()}
-          🚀 Rest      http://localhost:${PORT}/api
-          🚀 GraphQL   http://localhost:${PORT}/api${server.graphqlPath}
-        `
-      )
-    })
-  } catch (err: any) {
-    console.error(err.name, err.message)
-    console.log('Unhandled rejection. Shutting down...')
-    process.exit(1)
-  }
+	return { appContainer, app }
 }
 
-start()
-
-export default server
+export const { app, appContainer } = bootstrap()
