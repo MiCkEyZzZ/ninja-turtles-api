@@ -8,8 +8,8 @@ datasource db {
 }
 
 model Character {
-    id            Int @id @default(autoincrement())
-    name          String @db.VarChar(40)
+    id            Int       @id @default(autoincrement())
+    name          String    @db.VarChar(40)
     species       String
     type          String
     status        String
@@ -23,24 +23,24 @@ model Character {
     affiliation   String?
     image_cover   String
     url           String
-    createdAt     DateTime @default(now())
+    createdAt     DateTime  @default(now())
 }
 
 model Location {
-    id          Int @id @default(autoincrement())
-    name        String @db.VarChar(40)
+    id          Int         @id @default(autoincrement())
+    name        String      @db.VarChar(40)
     type        String
     dimension   String
     residents   Character[]
     url         String
     image_cover String
     images      String[]
-    createdAt   DateTime @default(now())
+    createdAt   DateTime    @default(now())
 }
 
 model Episode {
-    id          Int @id @default(autoincrement())
-    name        String @db.VarChar(70)
+    id          Int         @id @default(autoincrement())
+    name        String      @db.VarChar(70)
     episode     String
     producers   String[]
     season      String
@@ -48,5 +48,5 @@ model Episode {
     characters  Character[]
     image_cover String
     url         String
-    createdAt   DateTime @default(now())
+    createdAt   DateTime    @default(now())
 }
