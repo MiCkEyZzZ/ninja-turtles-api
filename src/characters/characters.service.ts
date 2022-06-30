@@ -21,15 +21,11 @@ export class CharacterService implements ICharacterService {
 
 	async getCharacter({ id }: CharacterDto): Promise<Character | null> {
 		const character = new CharacterEntity(id)
-		// проверяем, что пользователь с таким id существует в базе данных?
-		// если пользователя нет, с таким id, то производим обработку ошибок
 		const existedCharacter = await this.charactersRepository.getCharacter(character.id)
 
 		if (!existedCharacter) {
 			return null
 		}
-
-		// и если пользователь существует с таким id в базе данных, то возвращаем объект пользователя
 
 		return existedCharacter
 	}

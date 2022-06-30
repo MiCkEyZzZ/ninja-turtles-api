@@ -21,15 +21,11 @@ export class EpisodeService implements IEpisodeService {
 
 	async getEpisode({ id }: EpisodeDto): Promise<Episode | null> {
 		const episode = new EpisodeEntity(id)
-		// проверяем, что эпизод с таким id существует в базе данных
-		// если эпизода нет, с таким id, то производим обработку ошибок
 		const existedEpisode = await this.episodesRepository.getEpisode(episode.id)
 
 		if (!existedEpisode) {
 			return null
 		}
-
-		// и если эпизод существует с таким id в базе данных, то возвращаем объект эпизода
 
 		return existedEpisode
 	}

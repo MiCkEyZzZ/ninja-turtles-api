@@ -21,15 +21,11 @@ export class LocationService implements ILocationService {
 
 	async getLocation({ id }: LocationDto): Promise<Location | null> {
 		const location = new LocationEntity(id)
-		// проверяем, что местоположение с таким id существует в базе данных
-		// если местоположения нет, с таким id, то производим обработку ошибок
 		const existedLocation = await this.locationsRepository.getLocation(location.id)
 
 		if (!existedLocation) {
 			return null
 		}
-
-		// и если местоположение существует с таким id в базе данных, то возвращаем объект местоположения
 
 		return existedLocation
 	}

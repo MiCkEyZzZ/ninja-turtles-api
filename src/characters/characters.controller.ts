@@ -33,7 +33,7 @@ export class CharactersController extends BaseController implements ICharacterCo
 		const data = await this.characterService.getCharacter(body)
 
 		if (!data) {
-			return next(new HTTPError(404, 'Пользователь с таким ID не найден.'))
+			return next(new HTTPError(404, 'Пользователь с таким ID не найден'))
 		}
 
 		this.ok(res, data)
