@@ -1,4 +1,4 @@
-export class CreateLocationDto {
+export class LocationDto {
 	id: number
 	name: string
 	type: string

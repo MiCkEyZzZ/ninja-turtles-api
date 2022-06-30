@@ -1,4 +1,4 @@
-export class CreateCharacterDto {
+export class CharacterDto {
 	id: number
 	name: string
 	species: string

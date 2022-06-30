@@ -1,4 +1,4 @@
-export class CreateEpisodeDto {
+export class EpisodeDto {
 	id: number
 	name: string
 	episode: string

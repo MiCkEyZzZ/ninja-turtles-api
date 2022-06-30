@@ -1,4 +1,4 @@
-export class CharacterEntity {
+export class LocationEntity {
 	constructor(private readonly _id: number) {}
 
 	get id(): number {

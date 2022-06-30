@@ -6,4 +6,12 @@ export const TYPES = {
 	LocationController: Symbol.for('LocationController'),
 	EpisodeController: Symbol.for('EpisodeController'),
 	ExeptionFilter: Symbol.for('ExeptionFilter'),
+	CharacterService: Symbol.for('CharacterService'),
+	LocationService: Symbol.for('LocationService'),
+	EpisodeService: Symbol.for('EpisodeService'),
+	ConfigService: Symbol.for('ConfigService'),
+	PrismaService: Symbol.for('PrismaService'),
+	CharactersRepository: Symbol.for('CharactersRepository'),
+	LocationsRepository: Symbol.for('LocationsRepository'),
+	EpisodesRepository: Symbol.for('EpisodesRepository'),
 }
