@@ -1,31 +1,31 @@
-import { ArgsType, Field, InputType } from 'type-graphql'
+import { ArgsType, Field, InputType } from 'type-graphql';
 
 @InputType()
 export class CharacterInput {
 	@Field()
-	name: string
+	name: string;
 
 	@Field()
-	status: string
+	status: string;
 
 	@Field()
-	species: string
+	species: string;
 
 	@Field()
-	type: string
+	type: string;
 
 	@Field()
-	gender: string
+	gender: string;
 
 	@Field()
-	occupation: string
+	occupation: string;
 }
 
 @ArgsType()
 export class CharactersArgs {
 	@Field((type) => CharacterInput)
-	filter: CharacterInput
+	filter: CharacterInput;
 
 	@Field()
-	page: number
+	page: number;
 }

@@ -1,36 +1,36 @@
-import { Field, ID, ObjectType } from 'type-graphql'
+import { Field, ID, ObjectType } from 'type-graphql';
 
-import { Character } from './character'
+import { Character } from './character';
 
 @ObjectType()
 export class Episode {
 	@Field((type) => ID)
-	id: number
+	id: number;
 
 	@Field()
-	name: string
+	name: string;
 
 	@Field()
-	episode: string
+	episode: string;
 
 	@Field((type) => [String])
-	producers: string[]
+	producers: string[];
 
 	@Field()
-	season: string
+	season: string;
 
 	@Field()
-	air_date: string
+	air_date: string;
 
 	@Field((type) => [Character])
-	characters: Character[]
+	characters: Character[];
 
 	@Field()
-	image_cover: string
+	image_cover: string;
 
 	@Field()
-	url: string
+	url: string;
 
 	@Field()
-	createdAt: Date
+	createdAt: Date;
 }

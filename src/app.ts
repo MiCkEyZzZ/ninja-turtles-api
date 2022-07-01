@@ -6,6 +6,7 @@ import { json } from 'body-parser'
 import 'reflect-metadata'
 
 import { TYPES } from './types'
+import { AppController } from './app.controller'
 import { ILogger } from './interfaces'
 import { CharactersController } from './characters/characters.controller'
 import { LocationsController } from './locations/locations.controller'
@@ -26,6 +27,7 @@ export class App {
 
 	constructor(
 		@inject(TYPES.ILogger) private logger: ILogger,
+		@inject(TYPES.AppController) private appController: AppController,
 		@inject(TYPES.CharacterController) private characterController: CharactersController,
 		@inject(TYPES.LocationController) private locationController: LocationsController,
 		@inject(TYPES.EpisodeController) private episodeController: EpisodesController,
@@ -53,6 +55,7 @@ export class App {
 	}
 
 	useRoutes(): void {
+		this.app.use('/api/', this.appController.router)
 		this.app.use('/api/character', this.characterController.router)
 		this.app.use('/api/location', this.locationController.router)
 		this.app.use('/api/episode', this.episodeController.router)

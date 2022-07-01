@@ -1,10 +1,8 @@
-import { inject, injectable } from 'inversify'
+import { injectable, inject } from 'inversify'
 import { Character } from '@prisma/client'
 
-import { CharacterDto } from './dtos/create-character.dto'
-import { ICharacterService } from './character.service.interface'
-import { CharacterEntity } from './character.entity'
 import { TYPES } from '../types'
+import { ICharacterService } from './character.service.interface'
 import { IConfigService } from '../config/config.service.interface'
 import { ICharacterRepository } from './characters.repository.interface'
 
@@ -16,17 +14,10 @@ export class CharacterService implements ICharacterService {
 	) {}
 
 	async getCharacters(): Promise<Character[]> {
-		return await this.charactersRepository.getCharacters()
+		return await this.charactersRepository.findAll()
 	}
 
-	async getCharacter({ id }: CharacterDto): Promise<Character | null> {
-		const character = new CharacterEntity(id)
-		const existedCharacter = await this.charactersRepository.getCharacter(character.id)
-
-		if (!existedCharacter) {
-			return null
-		}
-
-		return existedCharacter
+	async getCharacter(id: number): Promise<Character | null> {
+		return this.charactersRepository.findOne(id)
 	}
 }

@@ -1,33 +1,33 @@
-import { Field, ID, ObjectType } from 'type-graphql'
+import { Field, ID, ObjectType } from 'type-graphql';
 
-import { Character } from './character'
+import { Character } from './character';
 
 @ObjectType()
 export class Location {
 	@Field((type) => ID)
-	id: number
+	id: number;
 
 	@Field()
-	name: string
+	name: string;
 
 	@Field()
-	type: string
+	type: string;
 
 	@Field()
-	dimension: string
+	dimension: string;
 
 	@Field((type) => [Character])
-	residents: Character[]
+	residents: Character[];
 
 	@Field()
-	url: string
+	url: string;
 
 	@Field((type) => [String])
-	image_cover: string
+	image_cover: string;
 
 	@Field((type) => [String])
-	images: string[]
+	images: string[];
 
 	@Field()
-	createdAt: Date
+	createdAt: Date;
 }

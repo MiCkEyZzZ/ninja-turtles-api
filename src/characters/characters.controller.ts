@@ -26,16 +26,23 @@ export class CharactersController extends BaseController implements ICharacterCo
 
 	async getAll(req: Request<{}, {}, CharacterDto>, res: Response, next: NextFunction): Promise<void> {
 		const data = await this.characterService.getCharacters()
-		this.ok(res, data)
+
+		res.status(200).json({
+			info: {
+				count: data.length,
+			},
+			data,
+		})
 	}
 
-	async getSingle({ body }: Request<{}, {}, CharacterDto>, res: Response, next: NextFunction): Promise<void> {
-		const data = await this.characterService.getCharacter(body)
+	async getSingle(req: Request, res: Response, next: NextFunction): Promise<void> {
+		const { id } = req.params
+		const data = await this.characterService.getCharacter(Number(id))
 
 		if (!data) {
 			return next(new HTTPError(404, 'Пользователь с таким ID не найден'))
 		}
 
-		this.ok(res, data)
+		res.status(200).json({ ...data })
 	}
 }

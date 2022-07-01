@@ -26,6 +26,10 @@ import { LocationsRepository } from './locations/locations.repository'
 import { ILocationRepository } from './locations/locations.repository.interface'
 import { IEpisodeRepository } from './episodes/episodes.repository.interface'
 import { EpisodesRepository } from './episodes/episodes.repository'
+import { AppService } from './app.service'
+import { AppController } from './app.controller'
+import { IAppService } from './app.service.interface'
+import { IAppController } from './app.controller.interface'
 
 export const appBindings = new ContainerModule((bind: interfaces.Bind) => {
 	bind<ILogger>(TYPES.ILogger).to(LoggerService).inSingletonScope()
@@ -36,11 +40,13 @@ export const appBindings = new ContainerModule((bind: interfaces.Bind) => {
 	bind<ICharacterService>(TYPES.CharacterService).to(CharacterService)
 	bind<ILocationService>(TYPES.LocationService).to(LocationService)
 	bind<IEpisodeService>(TYPES.EpisodeService).to(EpisodeService)
-	bind<PrismaService>(TYPES.PrismaService).to(PrismaService).inSingletonScope()
 	bind<IConfigService>(TYPES.ConfigService).to(ConfigService).inSingletonScope()
 	bind<ICharacterRepository>(TYPES.CharactersRepository).to(CharactersRepository).inSingletonScope()
 	bind<ILocationRepository>(TYPES.LocationsRepository).to(LocationsRepository).inSingletonScope()
 	bind<IEpisodeRepository>(TYPES.EpisodesRepository).to(EpisodesRepository).inSingletonScope()
+	bind<PrismaService>(TYPES.PrismaService).to(PrismaService).inSingletonScope()
+	bind<IAppService>(TYPES.AppService).to(AppService)
+	bind<IAppController>(TYPES.AppController).to(AppController)
 	bind<App>(TYPES.Application).to(App)
 })
 

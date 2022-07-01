@@ -6,8 +6,9 @@ import { TYPES } from '../types'
 import { ILogger } from '../interfaces'
 import { BaseController } from '../common/base.controller'
 import { ILocationController } from './location.controller.interface'
-import { LocationService } from './locations.service'
 import { LocationDto } from './dtos/create-location.dto'
+import { LocationService } from './locations.service'
+import { HTTPError } from '../errors/http-error.class'
 
 @injectable()
 export class LocationsController extends BaseController implements ILocationController {
@@ -25,10 +26,23 @@ export class LocationsController extends BaseController implements ILocationCont
 
 	async getAll(req: Request<{}, {}, LocationDto>, res: Response, next: NextFunction): Promise<void> {
 		const data = await this.locationService.getLocations()
-		this.ok(res, data)
+
+		res.status(200).json({
+			info: {
+				count: data.length,
+			},
+			data,
+		})
 	}
 
-	getSingle(req: Request, res: Response, next: NextFunction): void {
-		this.ok(res, 'get a single Location')
+	async getSingle(req: Request, res: Response, next: NextFunction): Promise<void> {
+		const { id } = req.params
+		const data = await this.locationService.getLocation(Number(id))
+
+		if (!data) {
+			return next(new HTTPError(404, 'Местоположение с таким ID не найден'))
+		}
+
+		res.status(200).json({ ...data })
 	}
 }

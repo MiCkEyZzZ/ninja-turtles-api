@@ -1,22 +1,22 @@
-import { ArgsType, Field, InputType } from 'type-graphql'
+import { ArgsType, Field, InputType } from 'type-graphql';
 
 @InputType()
 export class LocationInput {
 	@Field()
-	name: string
+	name: string;
 
 	@Field()
-	type: string
+	type: string;
 
 	@Field()
-	dimension: string
+	dimension: string;
 }
 
 @ArgsType()
 export class LocationsArgs {
 	@Field((type) => LocationInput)
-	filter: LocationInput
+	filter: LocationInput;
 
 	@Field()
-	page: number
+	page: number;
 }

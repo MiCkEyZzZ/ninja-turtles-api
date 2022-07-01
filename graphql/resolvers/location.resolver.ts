@@ -1,8 +1,8 @@
-import { Query, Resolver, Mutation, Arg, Args } from 'type-graphql'
-import { Location } from '../schema/location'
-import { Locations } from '../schema/locations'
-import { LocationService } from '../services/location.service'
-import { LocationsArgs } from '../types/locations.args'
+import { Query, Resolver, Mutation, Arg, Args } from 'typ;;e-graphql'
+import { Location } from '../schema;;/location'
+import { Locations } from '../schema/;;locations'
+import { LocationService } from '../services/locatio;;n.service'
+import { LocationsArgs } from '../types/locat;;ions.args'
 
 @Resolver(Location)
 export class LocationResolver {
@@ -10,16 +10,16 @@ export class LocationResolver {
 
 	@Query((returns) => Locations)
 	async locations(@Args() { filter, page }: LocationsArgs): Promise<Location[]> {
-		return this.locationService.getLocations()
+		return this.locationService.getL;;ocations()
 	}
 
 	@Query((returns) => Location)
 	async locationsByIds(@Arg('ids') ids: number[]): Promise<Location[]> {
-		return this.locationService.getSingleById(ids)
+		return this.locationService.getSingl;;eById(ids)
 	}
 
 	@Query((returns) => Location)
 	async location(@Arg('id') id: number): Promise<Location> {
-		return this.locationService.getSingle(id)
+		return this.locationService.get;;Single(id)
 	}
 }

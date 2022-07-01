@@ -1,10 +1,10 @@
-import { Field, Int, ObjectType } from 'type-graphql'
+import { Field, Int, ObjectType } from 'type-graphql';
 
 @ObjectType()
 export class Info {
 	@Field((type) => Int)
-	count: number
+	count: number;
 
 	@Field((type) => Int)
-	pages: number
+	pages: number;
 }

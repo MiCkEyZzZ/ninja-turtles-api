@@ -1,5 +1,5 @@
-import { Logger } from 'tslog'
 import { injectable } from 'inversify'
+import { Logger } from 'tslog'
 
 import { ILogger } from '../interfaces'
 

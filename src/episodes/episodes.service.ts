@@ -1,10 +1,8 @@
-import { inject, injectable } from 'inversify'
+import { injectable, inject } from 'inversify'
 import { Episode } from '@prisma/client'
 
-import { EpisodeDto } from './dtos/create-episode.dto'
-import { IEpisodeService } from './episode.service.interface'
-import { EpisodeEntity } from './episode.entity'
 import { TYPES } from '../types'
+import { IEpisodeService } from './episode.service.interface'
 import { IConfigService } from '../config/config.service.interface'
 import { IEpisodeRepository } from './episodes.repository.interface'
 
@@ -16,17 +14,10 @@ export class EpisodeService implements IEpisodeService {
 	) {}
 
 	async getEpisodes(): Promise<Episode[]> {
-		return await this.episodesRepository.getEpisodes()
+		return await this.episodesRepository.findAll()
 	}
 
-	async getEpisode({ id }: EpisodeDto): Promise<Episode | null> {
-		const episode = new EpisodeEntity(id)
-		const existedEpisode = await this.episodesRepository.getEpisode(episode.id)
-
-		if (!existedEpisode) {
-			return null
-		}
-
-		return existedEpisode
+	async getEpisode(id: number): Promise<Episode | null> {
+		return await this.episodesRepository.findOne(id)
 	}
 }

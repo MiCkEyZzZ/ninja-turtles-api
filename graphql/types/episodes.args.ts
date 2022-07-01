@@ -1,22 +1,22 @@
-import { ArgsType, Field, InputType } from 'type-graphql'
+import { ArgsType, Field, InputType } from 'type-graphql';
 
 @InputType()
 export class EpisodeInput {
 	@Field()
-	name: string
+	name: string;
 
 	@Field()
-	episode: string
+	episode: string;
 
 	@Field()
-	season: string
+	season: string;
 }
 
 @ArgsType()
 export class EpisodesArgs {
 	@Field((type) => EpisodeInput)
-	filter: EpisodeInput
+	filter: EpisodeInput;
 
 	@Field()
-	page: number
+	page: number;
 }
