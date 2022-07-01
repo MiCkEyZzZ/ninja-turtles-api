@@ -17,10 +17,12 @@ export abstract class BaseController {
 		return this._router
 	}
 
-	public send<T>(res: Response, code: number, message: T): ExpressReturnType {
+	public send<T>(res: Response, statusCode: number, message: T): ExpressReturnType {
 		res.type('application/json')
 
-		return res.status(code).json(message)
+		return res.status(statusCode).json({
+			status: message,
+		})
 	}
 
 	public ok<T>(res: Response, message: T): ExpressReturnType {

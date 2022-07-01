@@ -14,4 +14,6 @@ export const TYPES = {
 	CharactersRepository: Symbol.for('CharactersRepository'),
 	LocationsRepository: Symbol.for('LocationsRepository'),
 	EpisodesRepository: Symbol.for('EpisodesRepository'),
+	AppService: Symbol.for('AppService'),
+	AppController: Symbol.for('AppController'),
 }

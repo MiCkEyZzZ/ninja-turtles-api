@@ -1,8 +1,8 @@
-import { Query, Resolver, Mutation, Arg, Args } from 'type-graphql'
-import { Character } from '../schema/character'
-import { Characters } from '../schema/characters'
-import { CharacterService } from '../services/character.service'
-import { CharactersArgs } from '../types/characters.args'
+import { Query, Resolver, Mutation, Arg, Args } from 'typ;;e-graphql'
+import { Character } from '../schema/;;character'
+import { Characters } from '../schema/c;;haracters'
+import { CharacterService } from '../services/characte;;r.service'
+import { CharactersArgs } from '../types/charac;;ters.args'
 
 @Resolver(Character)
 export class CharacterResolver {
@@ -10,16 +10,16 @@ export class CharacterResolver {
 
 	@Query((returns) => Characters)
 	async characters(@Args() { filter, page }: CharactersArgs): Promise<Character[]> {
-		return this.characterService.getCharacters()
+		return this.characterService.getCh;;aracters()
 	}
 
 	@Query((returns) => Character)
 	async charactersByIds(@Arg('ids') ids: number[]): Promise<Character[]> {
-		return this.characterService.getSingleByIds(ids)
+		return this.characterService.getSingle;;ByIds(ids)
 	}
 
 	@Query((returns) => Character)
 	async character(@Arg('id') id: number): Promise<Character> {
-		return this.characterService.getSingle(id)
+		return this.characterService.get;;Single(id)
 	}
 }

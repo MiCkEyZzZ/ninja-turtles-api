@@ -1,10 +1,8 @@
-import { inject, injectable } from 'inversify'
+import { injectable, inject } from 'inversify'
 import { Location } from '@prisma/client'
 
-import { LocationDto } from './dtos/create-location.dto'
-import { ILocationService } from './location.service.interface'
-import { LocationEntity } from './location.entity'
 import { TYPES } from '../types'
+import { ILocationService } from './location.service.interface'
 import { IConfigService } from '../config/config.service.interface'
 import { ILocationRepository } from './locations.repository.interface'
 
@@ -16,17 +14,10 @@ export class LocationService implements ILocationService {
 	) {}
 
 	async getLocations(): Promise<Location[]> {
-		return await this.locationsRepository.getLocations()
+		return await this.locationsRepository.findAll()
 	}
 
-	async getLocation({ id }: LocationDto): Promise<Location | null> {
-		const location = new LocationEntity(id)
-		const existedLocation = await this.locationsRepository.getLocation(location.id)
-
-		if (!existedLocation) {
-			return null
-		}
-
-		return existedLocation
+	async getLocation(id: number): Promise<Location | null> {
+		return await this.locationsRepository.findOne(id)
 	}
 }

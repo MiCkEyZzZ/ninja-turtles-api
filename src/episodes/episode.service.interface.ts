@@ -4,5 +4,5 @@ import { EpisodeDto } from './dtos/create-episode.dto'
 
 export interface IEpisodeService {
 	getEpisodes: (dto: EpisodeDto) => Promise<Episode[]>
-	getEpisode: (dto: EpisodeDto) => Promise<Episode | null>
+	getEpisode: (id: number) => Promise<Episode | null>
 }

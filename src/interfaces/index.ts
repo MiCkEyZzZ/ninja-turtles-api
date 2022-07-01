@@ -1,4 +1,4 @@
-import { Request, Response, NextFunction, Router } from 'express'
+import { Request, Response, NextFunction } from 'express'
 import { ApolloServer } from 'apollo-server-express'
 import { Logger } from 'tslog'
 import { Container } from 'inversify'
@@ -26,8 +26,6 @@ export interface IBootStrapReturn {
 }
 
 export type ExpressReturnType = Response<any, Record<string, any>>
-
-//------------- All Types ---------------
 
 interface ICredentialsTypes {
 	id: number
@@ -85,8 +83,6 @@ export type Info = {
 	next: number
 	prev: number
 }
-
-//------------- GraphQL Types --------------------
 
 interface ICommonPageEntity {
 	page: number

@@ -1,6 +1,6 @@
 import { Location } from '@prisma/client'
 
 export interface ILocationRepository {
-	getLocations: () => Promise<Location[]>
-	getLocation: (id: number) => Promise<Location | null>
+	findAll: () => Promise<Location[]>
+	findOne: (id: number) => Promise<Location | null>
 }
